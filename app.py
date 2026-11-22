@@ -146,6 +146,12 @@ if "role" not in teacher_columns:
     )
     conn.commit()
     # Make harsh_admin an Admin
+cursor.execute(
+    "UPDATE teachers SET role = 'Admin' WHERE username = ?",
+    ("harsh_admin",)
+)
+conn.commit()
+    # Make harsh_admin an Admin
 
 # Add teacher username to prediction records
 
