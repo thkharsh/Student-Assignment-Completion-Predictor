@@ -9,45 +9,92 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
 # -----------------------------
-# Professional UI Styling
+
+# -----------------------------
+# Modern Blue UI Styling
 # -----------------------------
 
 st.markdown("""
 <style>
+
+    /* Main Background */
     .stApp {
-        background-color: #f5f7fb;
+        background: #f0f5ff;
+        color: #1e293b;
     }
 
+    /* Main Content Area */
+    .main .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        max-width: 1200px;
+    }
+
+    /* Headings */
     h1, h2, h3 {
-        color: #183153;
+        color: #123b70 !important;
+        font-weight: 700;
     }
 
+    /* Paragraphs and Labels */
+    p, label, span {
+        color: #334155;
+    }
+
+    /* Buttons */
     div.stButton > button {
-        background-color: #2563eb;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
         color: white;
         border-radius: 10px;
         border: none;
         padding: 10px 22px;
-        font-weight: bold;
+        font-weight: 600;
+        transition: 0.2s ease;
     }
 
     div.stButton > button:hover {
-        background-color: #1d4ed8;
+        background: #1e40af;
         color: white;
+        border: none;
+        transform: translateY(-1px);
     }
 
+    /* Metric Cards */
     div[data-testid="stMetric"] {
-        background-color: white;
-        padding: 18px;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
+        background: white;
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid #dbeafe;
+        box-shadow: 0 3px 12px rgba(37, 99, 235, 0.07);
     }
 
+    /* Data Tables */
     div[data-testid="stDataFrame"] {
-        border-radius: 10px;
+        border: 1px solid #dbeafe;
+        border-radius: 12px;
+        overflow: hidden;
     }
+
+    /* Input Fields */
+    div[data-baseweb="input"] input,
+    div[data-baseweb="textarea"] textarea {
+        border-radius: 8px;
+    }
+
+    /* Sidebar */
+    section[data-testid="stSidebar"] {
+        background: #e5efff;
+        border-right: 1px solid #dbeafe;
+    }
+
+    /* Horizontal Divider */
+    hr {
+        border-color: #dbeafe;
+    }
+
 </style>
 """, unsafe_allow_html=True)
+
 
 # -----------------------------
 # Database Setup
